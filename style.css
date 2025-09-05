@@ -1,0 +1,103 @@
+/* Basic page setup */
+body {
+    font-family: 'Poppins', sans-serif; /* Use a modern, clean font */
+    background-color: #f0e6ff; /* A soft, light purple background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    color: #4b0082; /* A deep purple for the text */
+}
+
+/* Container for the main content */
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 90%;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* A nice shadow effect */
+    animation: fadeIn 2s ease-in-out; /* Main container animation */
+}
+
+/* Heading style */
+.heading {
+    font-size: 3em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: slideInFromTop 1.5s ease-out; /* Heading animation */
+}
+
+/* Card for the message and photo */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Photo style */
+.shraddha-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the image a circle */
+    border: 5px solid #8a2be2; /* A vibrant border color */
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5); /* Glowing effect */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.shraddha-photo:hover {
+    transform: scale(1.05) rotate(5deg); /* Grows and rotates on hover */
+}
+
+/* Message paragraph */
+.message {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 600px;
+    text-align: justify;
+    animation: zoomIn 1.5s ease-out 0.5s forwards; /* Message animation */
+}
+
+/* --- Animations --- */
+
+/* Fade-in effect for the container */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slide-in from the top for the heading */
+@keyframes slideInFromTop {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Zoom-in effect for the message */
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* --- Responsive Design --- */
+
+/* Adjusts layout for smaller screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2em;
+    }
+
+    .message {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .shraddha-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
